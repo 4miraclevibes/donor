@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('amount');
             $table->string('message');
             $table->boolean('category')->default(false);
-            $table->enum('golongan_darah', ['A', 'B', 'AB', 'O']);
+            $table->enum('golongan_darah', ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']);
             $table->enum('status', ['pending', 'done', 'failed'])->default('pending');
             $table->timestamps();
         });

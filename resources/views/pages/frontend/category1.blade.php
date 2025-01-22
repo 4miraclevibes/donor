@@ -20,10 +20,14 @@
                             <label class="form-label">Golongan Darah</label>
                             <select name="golongan_darah" class="form-select">
                                 <option value="">Semua Golongan</option>
-                                <option value="A" {{ request('golongan_darah') == 'A' ? 'selected' : '' }}>A</option>
-                                <option value="B" {{ request('golongan_darah') == 'B' ? 'selected' : '' }}>B</option>
-                                <option value="AB" {{ request('golongan_darah') == 'AB' ? 'selected' : '' }}>AB</option>
-                                <option value="O" {{ request('golongan_darah') == 'O' ? 'selected' : '' }}>O</option>
+                                <option value="A+" {{ request('golongan_darah') == 'A+' ? 'selected' : '' }}>A+</option>
+                                <option value="A-" {{ request('golongan_darah') == 'A-' ? 'selected' : '' }}>A-</option>
+                                <option value="B+" {{ request('golongan_darah') == 'B+' ? 'selected' : '' }}>B+</option>
+                                <option value="B-" {{ request('golongan_darah') == 'B-' ? 'selected' : '' }}>B-</option>
+                                <option value="AB+" {{ request('golongan_darah') == 'AB+' ? 'selected' : '' }}>AB+</option>
+                                <option value="AB-" {{ request('golongan_darah') == 'AB-' ? 'selected' : '' }}>AB-</option>
+                                <option value="O+" {{ request('golongan_darah') == 'O+' ? 'selected' : '' }}>O+</option>
+                                <option value="O-" {{ request('golongan_darah') == 'O-' ? 'selected' : '' }}>O-</option>
                             </select>
                         </div>
 

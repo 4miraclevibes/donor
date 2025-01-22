@@ -15,7 +15,10 @@
             </div>
             <div class="col-md-2">
                 <h5>Contact Us</h5>
-                <p>kholid.hasibuan35@gmail.com</p>
+                <a href="https://www.instagram.com/donordarahyokk?igsh=d2I3aW56MHF0N3Rs" class="text-white text-decoration-none" target="_blank">
+                    <i class="fab fa-instagram fa-lg me-2"></i>
+                    <span>donordarahyukk</span>
+                </a>
             </div>
         </div>
         <div class="row mt-4">
