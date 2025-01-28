@@ -108,7 +108,10 @@ class DonorController extends Controller
             'category' => 'required',
             'golongan_darah' => 'required',
             'amount' => 'required|integer',
-            'message' => 'nullable'
+            'message' => 'nullable',
+            'hospital' => 'nullable',
+            'diagnosis' => 'nullable',
+            'gender' => 'nullable',
         ]);
 
         $validated['user_id'] = Auth::user()->id;

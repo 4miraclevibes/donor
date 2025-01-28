@@ -26,14 +26,33 @@
               <li class="menu-item {{ Route::is('users*') ? 'active' : '' }}">
                 <a href="{{ route('users.index') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bxs-user"></i>
-                  <div data-i18n="Users">Users</div>
+                  <div data-i18n="Users">Pengguna</div>
                 </a>
               </li>
               <!-- Announcement -->
               <li class="menu-item {{ Route::is('announcements*') ? 'active' : '' }}">
                 <a href="{{ route('announcements.index') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-news"></i>
-                  <div data-i18n="Announcement">Announcement</div>
+                  <div data-i18n="Announcement">Informasi</div>
+                </a>
+              </li>
+              <!-- Donor --> 
+              <li class="menu-item {{ Route::is('donors.index') ? 'active' : '' }}">
+                <a href="{{ route('donors.index') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-donate-heart"></i>
+                  <div data-i18n="Donor">Donor</div>
+                </a>
+              </li>
+              <li class="menu-item {{ Route::is('donors.category1') ? 'active' : '' }}">
+                <a href="{{ route('donors.category1') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-donate-heart"></i>
+                  <div data-i18n="Donor">Pendonor</div>
+                </a>
+              </li>
+              <li class="menu-item {{ Route::is('donors.category2') ? 'active' : '' }}">
+                <a href="{{ route('donors.category2') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-donate-heart"></i>
+                  <div data-i18n="Donor">Permohonan Darah</div>
                 </a>
               </li>
             </ul>

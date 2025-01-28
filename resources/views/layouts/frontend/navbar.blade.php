@@ -12,13 +12,13 @@
                     <a class="nav-link {{ Route::is('donor', 'donor.detail') ? 'active' : '' }}" aria-current="page" href="{{ route('donor') }}">Donor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Route::is('category1') ? 'active' : '' }}" aria-current="page" href="{{ route('category1') }}">Men Donor</a>
+                    <a class="nav-link {{ Route::is('category1') ? 'active' : '' }}" aria-current="page" href="{{ route('category1') }}">Pendonor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Route::is('category2') ? 'active' : '' }}" aria-current="page" href="{{ route('category2') }}">Butuh Donor</a>
+                    <a class="nav-link {{ Route::is('category2') ? 'active' : '' }}" aria-current="page" href="{{ route('category2') }}">Permohonan darah</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Route::is('announcement') ? 'active' : '' }}" aria-current="page" href="{{ route('announcement') }}">Announcement</a>
+                    <a class="nav-link {{ Route::is('announcement') ? 'active' : '' }}" aria-current="page" href="{{ route('announcement') }}">Informasi</a>
                 </li>
             </ul>
             @if (Auth::check())

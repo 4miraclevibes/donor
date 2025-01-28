@@ -25,6 +25,9 @@ return new class extends Migration
             $table->boolean('category')->default(false);
             $table->enum('golongan_darah', ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']);
             $table->enum('status', ['pending', 'done', 'failed'])->default('pending');
+            $table->string('hospital')->nullable();
+            $table->string('diagnosis')->nullable();
+            $table->enum('gender', ['male', 'female'])->default('male');
             $table->timestamps();
         });
     }

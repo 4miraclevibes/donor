@@ -108,6 +108,23 @@
                                 </div>
                             </div>
                             
+                            @if($donor->hospital || $donor->diagnosis)
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-hospital text-info me-2"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Informasi Medis</small>
+                                        @if($donor->hospital)
+                                            <strong class="d-block">{{ $donor->hospital }}</strong>
+                                        @endif
+                                        @if($donor->diagnosis)
+                                            <p class="text-muted mb-0">{{ $donor->diagnosis }}</p>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
+
                             <div class="col-md-6">
                                 <div class="d-flex align-items-center">
                                     <i class="fas fa-tint text-danger me-2"></i>
@@ -119,6 +136,16 @@
                             </div>
 
                             <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-user text-primary me-2"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Jenis Kelamin</small>
+                                        <strong>{{ $donor->gender == 'male' ? 'Laki-laki' : 'Perempuan' }}</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
                                 <div class="d-flex align-items-center">
                                     <i class="fas fa-phone text-success me-2"></i>
                                     <div>

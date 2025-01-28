@@ -38,6 +38,13 @@ Route::group([
     Route::post('announcements', [DashboardAnnouncementController::class, 'store'])->name('announcements.store');
     Route::put('announcements/{announcement}', [DashboardAnnouncementController::class, 'update'])->name('announcements.update');
     Route::delete('announcements/{announcement}', [DashboardAnnouncementController::class, 'destroy'])->name('announcements.destroy');
+    //Donor
+    Route::get('donors', [DashboardDonorController::class, 'index'])->name('donors.index');
+    Route::post('donors', [DashboardDonorController::class, 'store'])->name('donors.store');
+    Route::put('donors/{donor}', [DashboardDonorController::class, 'update'])->name('donors.update');
+    Route::delete('donors/{donor}', [DashboardDonorController::class, 'destroy'])->name('donors.destroy');
+    Route::get('donors/category1', [DashboardDonorController::class, 'category1'])->name('donors.category1');
+    Route::get('donors/category2', [DashboardDonorController::class, 'category2'])->name('donors.category2');
 });
 Route::get('/getCities/{province_id}', [DonorController::class, 'getCities']);
 Route::get('/getDistricts/{city_id}', [DonorController::class, 'getDistricts']);

@@ -219,6 +219,24 @@
                             </small>
                         </div>
                         <div class="col-md-12 mb-3">
+                            <label class="form-label required">Rumah Sakit</label>
+                            <input type="text" class="form-control" name="hospital" required 
+                                   placeholder="Masukkan nama rumah sakit">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label required">Diagnosis</label>
+                            <input type="text" class="form-control" name="diagnosis" required 
+                                   placeholder="Masukkan diagnosis">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label required">Jenis Kelamin</label>
+                            <select class="form-select" name="gender" required>
+                                <option value="">Pilih Jenis Kelamin</option>
+                                <option value="male">Laki-laki</option>
+                                <option value="female">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 mb-3">
                             <label class="form-label">Pesan/Catatan</label>
                             <textarea class="form-control" name="message" 
                                      placeholder="Masukkan pesan atau catatan (opsional)"></textarea>

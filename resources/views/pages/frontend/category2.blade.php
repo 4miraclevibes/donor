@@ -4,7 +4,7 @@
 <div class="container content py-5">
     <div class="row mb-5">
         <div class="col-md-12 text-center">
-            <h2 class="fw-bold mb-3">Daftar Pendonor Darah</h2>
+            <h2 class="fw-bold mb-3">Daftar Permohonan Darah</h2>
             <p class="text-muted">Berikut adalah daftar orang yang ingin mendonorkan darah. Silakan hubungi pendonor yang sesuai dengan kebutuhan Anda.</p>
         </div>
     </div>
@@ -20,10 +20,14 @@
                             <label class="form-label">Golongan Darah</label>
                             <select name="golongan_darah" class="form-select">
                                 <option value="">Semua Golongan</option>
-                                <option value="A" {{ request('golongan_darah') == 'A' ? 'selected' : '' }}>A</option>
-                                <option value="B" {{ request('golongan_darah') == 'B' ? 'selected' : '' }}>B</option>
-                                <option value="AB" {{ request('golongan_darah') == 'AB' ? 'selected' : '' }}>AB</option>
-                                <option value="O" {{ request('golongan_darah') == 'O' ? 'selected' : '' }}>O</option>
+                                <option value="A+" {{ request('golongan_darah') == 'A+' ? 'selected' : '' }}>A+</option>
+                                <option value="A-" {{ request('golongan_darah') == 'A-' ? 'selected' : '' }}>A-</option>
+                                <option value="B+" {{ request('golongan_darah') == 'B+' ? 'selected' : '' }}>B+</option>
+                                <option value="B-" {{ request('golongan_darah') == 'B-' ? 'selected' : '' }}>B-</option>
+                                <option value="AB+" {{ request('golongan_darah') == 'AB+' ? 'selected' : '' }}>AB+</option>
+                                <option value="AB-" {{ request('golongan_darah') == 'AB-' ? 'selected' : '' }}>AB-</option>
+                                <option value="O+" {{ request('golongan_darah') == 'O+' ? 'selected' : '' }}>O+</option>
+                                <option value="O-" {{ request('golongan_darah') == 'O-' ? 'selected' : '' }}>O-</option>
                             </select>
                         </div>
 
@@ -104,6 +108,23 @@
                                 </div>
                             </div>
                             
+                            @if($donor->hospital || $donor->diagnosis)
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-hospital text-info me-2"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Informasi Medis</small>
+                                        @if($donor->hospital)
+                                            <strong class="d-block">{{ $donor->hospital }}</strong>
+                                        @endif
+                                        @if($donor->diagnosis)
+                                            <p class="text-muted mb-0">{{ $donor->diagnosis }}</p>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
+
                             <div class="col-md-6">
                                 <div class="d-flex align-items-center">
                                     <i class="fas fa-tint text-danger me-2"></i>
@@ -115,6 +136,16 @@
                             </div>
 
                             <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-user text-primary me-2"></i>
+                                    <div>
+                                        <small class="text-muted d-block">Jenis Kelamin</small>
+                                        <strong>{{ $donor->gender == 'male' ? 'Laki-laki' : 'Perempuan' }}</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
                                 <div class="d-flex align-items-center">
                                     <i class="fas fa-phone text-success me-2"></i>
                                     <div>
