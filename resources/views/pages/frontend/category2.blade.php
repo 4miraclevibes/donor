@@ -4,8 +4,28 @@
 <div class="container content py-5">
     <div class="row mb-5">
         <div class="col-md-12 text-center">
-            <h2 class="fw-bold mb-3">Daftar Permohonan Darah</h2>
+            <h2 class="fw-bold mb-3">Daftar Pendonor Darah</h2>
             <p class="text-muted">Berikut adalah daftar orang yang ingin mendonorkan darah. Silakan hubungi pendonor yang sesuai dengan kebutuhan Anda.</p>
+        </div>
+    </div>
+
+    <!-- Info Card Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card border-0 shadow-sm bg-primary text-white">
+                <div class="card-body d-flex align-items-center justify-content-between py-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-tint fa-3x me-3"></i>
+                        <div>
+                            <h6 class="mb-0">Total Kantong Darah Tersedia</h6>
+                            <h2 class="mb-0 fw-bold">{{ $donors->where('category', true)->where('status', 'pending')->sum('amount') }} Kantong</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="badge bg-white text-primary fs-6">Status: Aktif</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -211,6 +231,9 @@
     }
     .badge {
         font-size: 0.9rem;
+    }
+    .fa-tint {
+        filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
     }
 </style>
 @endpush
