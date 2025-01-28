@@ -1,8 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('donor') }}">
-            DonorDarah
-        </a>
+        <a href="{{ route('donor') }}" class="app-brand-link m-auto text-decoration-none">
+            <span class="app-brand-logo demo">
+                <div class="d-flex flex-column align-items-center" style="margin-top: 15px;">
+                    <img src="{{ asset('assets/img/donor-logo.png') }}" alt="Donor Darah Logo" style="height: 30px; width: auto;">
+                    <div style="font-family: Arial; color: #dc3545; font-size: 10px; font-weight: bold; letter-spacing: 1px; margin-top: 8px;">
+                        DONOR DARAH
+                    </div>
+                </div>
+            </span>
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
