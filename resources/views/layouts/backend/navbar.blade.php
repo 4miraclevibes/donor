@@ -4,11 +4,8 @@
             <div class="app-brand demo">
                 <a href="{{ route('donor') }}" class="app-brand-link m-auto">
                     <span class="app-brand-logo demo">
-                        <div class="d-flex flex-column align-items-center" style="margin-top: 15px;">
-                            <img src="{{ asset('assets/img/donor-logo.png') }}" alt="Donor Darah Logo" style="height: 30px; width: auto;">
-                            <div style="font-family: Arial; color: #dc3545; font-size: 10px; font-weight: bold; letter-spacing: 1px; margin-top: 8px;">
-                                DONOR DARAH
-                            </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{{ asset('assets/img/logo.jpeg') }}" alt="Donor Darah Logo" style="height: 70px; width: auto;">
                         </div>
                     </span>
                     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
