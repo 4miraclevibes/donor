@@ -219,19 +219,22 @@
                             </small>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <label class="form-label required">Rumah Sakit</label>
-                            <input type="text" class="form-control" name="hospital" required 
+                            <label class="form-label required">Nama Lengkap</label>
+                            <input type="text" class="form-control" name="fullname" required>
+                        </div>
+                        <div class="col-md-12 mb-3 hospital-diagnosis-field">
+                            <label class="form-label required">Nama Rumah Sakit</label>
+                            <input type="text" class="form-control" name="hospital" 
                                    placeholder="Masukkan nama rumah sakit">
                         </div>
-                        <div class="col-md-12 mb-3">
+                        <div class="col-md-12 mb-3 hospital-diagnosis-field">
                             <label class="form-label required">Diagnosis</label>
-                            <input type="text" class="form-control" name="diagnosis" required 
+                            <input type="text" class="form-control" name="diagnosis" 
                                    placeholder="Masukkan diagnosis">
                         </div>
                         <div class="col-md-12 mb-3">
                             <label class="form-label required">Jenis Kelamin</label>
                             <select class="form-select" name="gender" required>
-                                <option value="">Pilih Jenis Kelamin</option>
                                 <option value="male">Laki-laki</option>
                                 <option value="female">Perempuan</option>
                             </select>
@@ -358,6 +361,20 @@ $(document).ready(function() {
             });
         }
     });
+
+    // Tambahkan handler untuk perubahan kategori
+    $('#category').on('change', function() {
+        if($(this).val() == '1') { // Jika Mendonor
+            $('.hospital-diagnosis-field').hide();
+            $('.hospital-diagnosis-field input').removeAttr('required');
+        } else {
+            $('.hospital-diagnosis-field').show();
+            $('.hospital-diagnosis-field input').attr('required', 'required');
+        }
+    });
+
+    // Trigger change event saat halaman dimuat
+    $('#category').trigger('change');
 });
 </script>
 @endpush

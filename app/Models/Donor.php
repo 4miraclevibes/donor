@@ -18,6 +18,7 @@ class Donor extends Model
         'city_id',
         'district_id',
         'village_id',
+        'fullname',
         'address',
         'hospital',
         'diagnosis',

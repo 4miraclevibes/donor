@@ -103,6 +103,7 @@ class DonorController extends Controller
             'city_id' => 'required',
             'district_id' => 'required',
             'village_id' => 'required',
+            'fullname' => 'required',
             'address' => 'required',
             'phone' => 'required',
             'category' => 'required',

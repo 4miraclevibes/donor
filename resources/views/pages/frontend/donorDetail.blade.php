@@ -28,6 +28,28 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>Donor Terakhir</td>
+                            <td>: 
+                                @php
+                                    $lastDonation = \App\Models\Donor::where('user_id', $donor->user_id)
+                                        ->where('category', true)
+                                        ->where('status', 'done')
+                                        ->latest()
+                                        ->first();
+                                @endphp
+                                @if($lastDonation)
+                                    <span class="text-success">
+                                        {{ $lastDonation->updated_at->format('d M Y') }}
+                                        <small class="text-muted">
+                                            ({{ $lastDonation->updated_at->diffForHumans() }})
+                                        </small>
+                                    </span>
+                                @else
+                                    <span class="text-muted">Belum pernah donor</span>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
                             <td>Golongan Darah</td>
                             <td>: {{ $donor->golongan_darah }}</td>
                         </tr>
@@ -35,6 +57,9 @@
                             <td>Jumlah Kantong</td>
                             <td>: {{ $donor->amount }}</td>
                         </tr>
+                        <tr>
+                            <td>Nama lengkap</td>
+                            <td>: {{ $donor->fullname }}</td>
                         <tr>
                             <td>No. WhatsApp</td>
                             <td class="d-flex align-items-center gap-2">
@@ -71,9 +96,16 @@
                             <td>Alamat Lengkap</td>
                             <td>: {{ $donor->address }}</td>
                         </tr>
+                        <tr>
+                            <td>Rumah Sakit</td>
+                            <td>: {{ $donor->hospital ?? 'Tidak ada' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Diagnosa</td>
+                            <td>: {{ $donor->diagnosis ?? 'Tidak ada' }}</td>
+                        </tr>
                     </table>
                 </div>
-            </div>
             @if($donor->message)
                 <div class="alert alert-info mt-3">
                     <i class="bx bx-info-circle me-2"></i>{{ $donor->message }}
