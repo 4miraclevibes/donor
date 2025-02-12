@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('phone');
             $table->string('amount');
-            $table->string('message');
+            $table->string('message')->nullable();
             $table->boolean('category')->default(false);
             $table->enum('golongan_darah', ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']);
             $table->enum('status', ['pending', 'done', 'failed'])->default('pending');
