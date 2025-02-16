@@ -215,11 +215,11 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label class="form-label">Rumah Sakit</label>
-                <input type="text" class="form-control" name="hospital" value="{{ $donor->hospital }}" required>
+                <input type="text" class="form-control" name="hospital" value="{{ $donor->hospital }}">
               </div>
               <div class="mb-3">
                 <label class="form-label">Diagnosis</label>
-                <input type="text" class="form-control" name="diagnosis" value="{{ $donor->diagnosis }}" required>
+                <input type="text" class="form-control" name="diagnosis" value="{{ $donor->diagnosis }}">
               </div>
               <div class="mb-3">
                 <label class="form-label">Jenis Kelamin</label>
